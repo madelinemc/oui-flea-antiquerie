@@ -2,6 +2,6 @@
 
 require_relative 'config/environment'
 
-set :database, "postgres://localhost/ouiflea"
+# set :database, "postgres://localhost/ouiflea"
 
 run Rails.application
