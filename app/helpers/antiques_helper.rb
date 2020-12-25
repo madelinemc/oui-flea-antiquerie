@@ -1,0 +1,2 @@
+module AntiquesHelper
+end
