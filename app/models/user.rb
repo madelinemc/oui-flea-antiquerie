@@ -3,4 +3,7 @@ class User < ApplicationRecord
     has_many :markets, through: :owned_antiques
     has_many :favorites
     has_many :favorited_antiques, through: :favorties, foreign_key: 'antique_id'
+
+    validates :username, :email, uniqueness: true
+
 end
