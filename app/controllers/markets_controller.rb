@@ -1,4 +1,5 @@
 class MarketsController < ApplicationController
+    before_action :set_market, only: [:show, :edit, :update, :destory]
       
     def index
     end
@@ -20,5 +21,11 @@ class MarketsController < ApplicationController
 
     def destroy
     end
-    
+
+    private
+
+    def set_market
+        @market = Market.find(params[:id])
+    end
+
 end
