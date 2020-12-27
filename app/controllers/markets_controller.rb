@@ -10,6 +10,8 @@ class MarketsController < ApplicationController
     end
 
     def create
+        market = Market.create(market_params)
+        redirect_to market_path(market)
     end
 
     def show
@@ -19,15 +21,21 @@ class MarketsController < ApplicationController
     end
     
     def update
+        market = Market.find_by(id: params[:id])
+        market.update(market_params)
+        redirect_to market_path(market)
     end
 
     def destroy
+        market = Market.find_by(id: params[:id])
+        market.destory
+        redirect_to markets_path
     end
 
     private
 
     def set_market
-        @market = Market.find(params[:id])
+        @market = Market.find_by(id: params[:id])
     end
 
     def market_params
