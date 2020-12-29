@@ -15,9 +15,9 @@ class AntiquesController < ApplicationController
     end
 
     def show
-        @user = User.find_by_id(@antique.user_id)
-        @category = Category.find_by_id(@antique.category_id)
-        @market = Market.find_by_id(@antique.market_id)
+        @user = User.find_by_id(@antique.user_id) #or = @antique.user
+        @category = Category.find_by_id(@antique.category_id) #or = @antique.category
+        @market = Market.find_by_id(@antique.market_id) #or = @antique.market
     end
 
     def edit
