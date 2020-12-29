@@ -1,0 +1,16 @@
+<h1>Add a new Market:</h1>
+<%= form_with model: @market do |f| %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <br>
+    <%= f.label :type %>
+    <%= f.select :type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
+    <br>
+    <%= f.label :season %>
+    <%= f.select :season, ['yearlong', 'Spring', 'Summer', 'Fall', 'Winter']%>
+    <br>
+    <%= f.label :number_of_vendors %>
+    <%= f.number_field %>
+    <br>
+    <%= f.submit %>
+<% end %>

@@ -4,10 +4,10 @@
     <%= f.text_area :photo %>
     <br>
     <%= f.label :period %>
-    <%= f.select :period, ['16th century', '17th century', '18th century', '19th century', '20th century', 'unknown']%>
+    <%= f.select :period, [nil, '16th century', '17th century', '18th century', '19th century', '20th century', 'unknown']%>
     <br>
     <%= f.label :provenance %>
-    <%= f.select :provenance, ['US', 'Europe', 'Asia', 'Africa', 'South America', 'unknown']%>
+    <%= f.select :provenance, [nil, 'US', 'Europe', 'Asia', 'Africa', 'South America', 'unknown']%>
     <br>
     <%= f.label :category_id %>
     <%= f.collection_select :category_id, Category.all, :id, :title %>
