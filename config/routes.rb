@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   # delete '/antiques/:id/delete', to: 'antiques#destroy'
 
   resources :markets
-  resources :antiques
+  resources :antiques, except: [:destory]
 
 end
