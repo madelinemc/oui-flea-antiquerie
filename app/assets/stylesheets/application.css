@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); 
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+ @media screen {
+    * {
+      text-align: center;
+      list-style: none;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+    
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        color: #A3AC99;
+    }
+
+    p {
+        font-family: 'Raleway', sans-serif;
+        color: #474747
+    }
+
+}

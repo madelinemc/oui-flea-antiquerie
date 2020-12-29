@@ -10,6 +10,30 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="site_wrapper">
+
+      <nav class="main_nav">
+        <ul>
+          <li>logo</li>
+          <li>favorites</li>
+          <li>profile</li>
+          <li>dropdowntools</li>
+        </ul>
+      </nav>
+
+      <%= yield %>
+
+      <footer class="main_footer">
+        <ul>
+          <li>links</li>
+          <li>link1</li>
+          <li>link2</li>
+          <li>link3</li>
+        </ul>
+      </footer>
+
+    </div>
+    
   </body>
+  
 </html>
