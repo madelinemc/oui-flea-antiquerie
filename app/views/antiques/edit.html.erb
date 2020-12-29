@@ -1,0 +1,22 @@
+<h1>Edit Antique:</h1>
+<%= form_with model: @antique do |f| %>
+    <%= f.label :photo %>
+    <%= f.text_area :photo %>
+
+    <%= f.label :period %>
+    <%= f.collection_select :period, ['16th century', '17th century', '18th century', '19th century', '20th century', 'unknown']%>
+
+    <%= f.label :provenance %>
+    <%= f.collection_select :provenance, ['US', 'Europe', 'Asia', 'Africa', 'South America', 'unknown']%>
+
+    <%= f.label :category_id %>
+    <%= f.check_box :category_id, @categories, :id, :title %>
+
+    <%= f.label :market_id %>
+    <%= f.check_box :market_id, @markets, :id, :name %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.submit %>
+<% end %>
