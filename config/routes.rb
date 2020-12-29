@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   resources :markets
   resources :antiques, except: [:destory]
+  resources :users, except: [:destory]
 
+  resources :sessions, only: [:new, :create, :destory]
   get '/', to: 'sessions#home', as: "home"
 
 end

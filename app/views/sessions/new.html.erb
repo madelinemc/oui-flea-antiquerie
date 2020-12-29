@@ -1,0 +1,14 @@
+<h1>Log in:</h1>
+
+<% if @user.errors %>
+    <% @user.errors.full_messages %>
+<% end %>
+<%= form_with(scope: @user, url: sessions_path, local: true) do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit "Log In" %>
+<% end %>

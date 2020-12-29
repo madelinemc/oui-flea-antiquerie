@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    before_action :already_logged_in?, only: [:home, :new]
+    #before_action :already_logged_in?, only: [:home, :new]
 
     def home #main page of application
     end
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
 
     def already_logged_in?
         if is_logged_in?
-            redirect_to user_path(User.find_by_id(session[:user_id])
+            redirect_to user_path(User.find_by_id(session[:user_id]))
         end
     end
 
