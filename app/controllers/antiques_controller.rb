@@ -15,6 +15,9 @@ class AntiquesController < ApplicationController
     end
 
     def show
+        @user = User.find_by_id(@antique.user_id)
+        @category = Category.find_by_id(@antique.category_id)
+        @market = Market.find_by_id(@antique.market_id)
     end
 
     def edit
@@ -35,7 +38,7 @@ class AntiquesController < ApplicationController
     private
 
     def set_antique
-        @antique = Antique.find(params[:id])
+        @antique = Antique.find_by(id: params[:id])
     end
 
     def antique_params

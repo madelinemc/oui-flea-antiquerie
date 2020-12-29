@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:index]
 
   get '/antiques', to: 'antiques#index'
-  get '/antiques/:id', to: 'antiques#show'
   get '/antiques/new', to: 'antiques#new'
+  get '/antiques/:id', to: 'antiques#show'
   post '/antiques', to: 'antiques#create'
   get '/antiques/:id/edit', to: 'antiques#edit'
   patch '/antiques/:id', to: 'antiques#update'
