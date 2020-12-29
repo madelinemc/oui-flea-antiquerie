@@ -7,10 +7,10 @@
     <%= f.select :type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
     <br>
     <%= f.label :season %>
-    <%= f.select :season, ['yearlong', 'Spring', 'Summer', 'Fall', 'Winter']%>
+    <%= f.select :season, ['Year-long', 'Spring', 'Summer', 'Fall', 'Winter']%>
     <br>
     <%= f.label :number_of_vendors %>
-    <%= f.number_field %>
+    <%= f.number_field :number_of_vendors %>
     <br>
     <%= f.submit %>
 <% end %>
