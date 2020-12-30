@@ -23,10 +23,32 @@
       text-align: center;
       list-style: none;
       box-sizing: border-box;
-      margin: 0;
       padding: 0;
       background-color: white;
     }
+
+    .grid_container {
+      display: grid;
+      grid-template-columns: repeat(12, 60px);
+      grid-template-rows: repeat(12, 60px);
+      grid-gap: 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .main_nav {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 1;
+      grid-column-end: -1;
+      background-color: #A3AC99;
+      list-style: none;
+    }
+
+  .main_nav ul, li {
+    display: inline-block;
+    background-color: #A3AC99;
+  }
     
     html, body {
       height: 100%;
