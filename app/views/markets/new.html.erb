@@ -1,10 +1,26 @@
 <h1>Add a new Market:</h1>
-<%= form_with model: @market do |f| %>
+<br>
+<% if @market.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@market.errors.count, "error") %> prevented this market from being saved:</h2>
+
+    <ul>
+    <% @market.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+    </ul>
+    </div>
+<% end %>
+
+<%= form_with(model: @market, local: true) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
     <%= f.label :location %>
     <%= f.text_field :location %>
     <br>
-    <%= f.label :type %>
-    <%= f.select :type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
+    <%= f.label :market_type %>
+    <%= f.select :market_type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
     <br>
     <%= f.label :season %>
     <%= f.select :season, ['Year-long', 'Spring', 'Summer', 'Fall', 'Winter']%>

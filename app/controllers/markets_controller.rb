@@ -11,7 +11,12 @@ class MarketsController < ApplicationController
 
     def create
         market = Market.create(market_params)
-        redirect_to market_path(market)
+        if market.valid?
+            market.save
+            redirect_to market_path(market)
+        else
+            render :new
+        end
     end
 
     def show
