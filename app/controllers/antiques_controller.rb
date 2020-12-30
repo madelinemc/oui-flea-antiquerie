@@ -11,7 +11,8 @@ class AntiquesController < ApplicationController
 
     def create
         @antique = Antique.new(antique_params)
-        if @antique.valid?
+        @antique.user_id = session[:user_id]
+        if @antique.valid? 
             @antique.save
             redirect_to antique_path(@antique)
         else
@@ -47,7 +48,7 @@ class AntiquesController < ApplicationController
     end
 
     def antique_params
-        params.require(:antique).permit(:description, :photo, :period, :provenance)
+        params.require(:antique).permit(:description, :photo, :period, :provenance, :category_id, :market_id)
     end
 
 end
