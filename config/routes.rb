@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destory]
   get '/', to: 'sessions#home', as: "home"
+  get '/about', to: 'sessions#about', as: "about"
 
 end

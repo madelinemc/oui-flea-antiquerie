@@ -1,5 +1,17 @@
 <h1>Edit Antique:</h1>
-<%= form_with model: @antique do |f| %>
+<br>
+<% if !@antique.full_messages.empty? %>
+    <div id="error_explanation">
+        <h2>Errors:</h2>
+        <ul>
+            <% @antique.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_with(model: @antique, local: true) do |f| %>
     <%= f.label :photo %>
     <%= f.text_area :photo %>
     <br>

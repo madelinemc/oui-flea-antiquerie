@@ -10,8 +10,13 @@ class AntiquesController < ApplicationController
     end
 
     def create
-        antique = Antique.create(antique_params)
-        redirect_to antique_path(antique)
+        @antique = Antique.new(antique_params)
+        if @antique.valid?
+            @antique.save
+            redirect_to antique_path(@antique)
+        else
+            render :new
+        end
     end
 
     def show

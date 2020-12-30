@@ -4,4 +4,4 @@
 <p><strong>Category: </strong><%= @category.title %></p></br>
 <p><strong>Period: </strong><%= @antique.period %></p></br>
 <p><strong>Provenance: </strong><%= @antique.provenance %></p></br>
-<p><strong>Market: (make link)</strong><%= @market.name %></p></br>
+<p><strong>Market: </strong><%= link_to "#{ @market.name}", market_path(@market) %></p></br>

@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
     def home #main page of application
     end
 
+    def about
+    end
+
     def new
         @user = User.new
     end
