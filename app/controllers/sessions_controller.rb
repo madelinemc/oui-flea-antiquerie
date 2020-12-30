@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    #before_action :already_logged_in?, only: [:home, :new]
+    before_action :already_logged_in?, only: [:home, :new]
 
     def home #main page of application
     end

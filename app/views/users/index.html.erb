@@ -1,0 +1,6 @@
+<h1>latest antiques</h1>
+<% @antiques.each do |antique| %>
+    <div class="antique_item">
+        <p><%= antique.user.first_name %></p>
+    </div>
+<% end %>

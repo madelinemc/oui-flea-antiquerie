@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
     def index #users "home" page
         current_user
-        @antiques = Antique.all
+        @antiques = Antique.all  #this is same as antiques index page so make partial in view
     end
 
     def show #users "profile" page
