@@ -1,24 +1,28 @@
-<div class="item_1">
-    <p><%= @user.username %></p>
-    <div>@antique.photo placeholder</div>
-</div>
+<div class="grid_container">
 
-<div class="item_2">
-    <p><strong>Category: </strong><%= @category.title %></p></br>
-</div>
+    <div class="item_1">
+        <p><%= @user.username %></p>
+        <div>@antique.photo placeholder</div>
+    </div>
 
-<div class="item_3">
-    <p><strong>Provenance: </strong><%= @antique.provenance %></p></br>
-</div>
+    <div class="item_2">
+        <p><strong>Category: </strong><%= @category.title %></p></br>
+    </div>
 
-<div class="item_4">
-    <p><strong>Period: </strong><%= @antique.period %></p></br>
-</div>
+    <div class="item_3">
+        <p><strong>Provenance: </strong><%= @antique.provenance %></p></br>
+    </div>
 
-<div class="item_5">
-    <p><strong>Market: </strong><%= link_to "#{ @market.name}", market_path(@market) %></p></br>
-</div>
+    <div class="item_4">
+        <p><strong>Period: </strong><%= @antique.period %></p></br>
+    </div>
 
-<div class="item_6">
-    <p><%= @antique.description %></p></br>
+    <div class="item_5">
+        <p><strong>Market: </strong><%= link_to "#{ @market.name}", market_path(@market) %></p></br>
+    </div>
+
+    <div class="item_6">
+        <p><%= @antique.description %></p></br>
+    </div>
+    
 </div>

@@ -10,30 +10,26 @@
   </head>
 
   <body>
-    <div class="grid_container">
-
-      <nav class="main_nav">
-        <ul>
-          <li><%= image_tag("logo-nav", height: '40') %></li>
-        </ul>
-        <ul>
-          <li>favorites</li>
-          <li>profile</li>
-          <li>dropdowntools</li>
-        </ul>
-      </nav>
+    <nav class="main_nav">
+      <ul>
+        <li><%= image_tag("logo-nav", height: '40') %></li>
+      </ul>
+      <ul>
+        <li>favorites</li>
+        <li>profile</li>
+        <li>dropdowntools</li>
+      </ul>
+    </nav>
 
       <%= yield %>
 
-      <footer class="main_footer">
+    <footer class="main_footer">
       <ul>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Github", "https://github.com/madelinemc/oui-flea-antiquerie", target: "_blank" %></li>
       </ul>
       <small>&copy; 2020 <strong>OUI, FLEA ANTIQUERIE</strong></small>
     </footer>
-
-    </div>
     
   </body>
   

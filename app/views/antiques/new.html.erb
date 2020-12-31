@@ -1,24 +1,35 @@
 <h1>Add a new Antique:</h1>
 <br>
 
-<%= form_with(model: @antique, local: true) do |f| %>
-    <%= f.label :photo %>
-    <%= f.text_area :photo %>
-    <br>
-    <%= f.label :period %>
-    <%= f.select :period, [nil, '16th century', '17th century', '18th century', '19th century', '20th century', 'unknown']%>
-    <br>
-    <%= f.label :provenance %>
-    <%= f.select :provenance, [nil, 'US', 'Europe', 'Asia', 'Africa', 'South America', 'unknown']%>
-    <br>
-    <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :title) %>
-    <br>
-    <%= f.label :market_id %>
-    <%= f.collection_select(:market_id, Market.all, :id, :name) %>
-    <br>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    <br>
-    <%= f.submit %>
-<% end %>
+<div class="form_layout">
+
+    <%= form_with(model: @antique, local: true) do |f| %>
+        <%= f.label :photo %>
+        <%= f.text_area :photo %>
+        <br>
+        <br>
+        <%= f.label :period %>
+        <%= f.select :period, [nil, '16th century', '17th century', '18th century', '19th century', '20th century', 'unknown']%>
+        <br>
+        <br>
+        <%= f.label :provenance %>
+        <%= f.select :provenance, [nil, 'US', 'Europe', 'Asia', 'Africa', 'South America', 'unknown']%>
+        <br>
+        <br>
+        <%= f.label :category_id %>
+        <%= f.collection_select(:category_id, Category.all, :id, :title) %>
+        <br>
+        <br>
+        <%= f.label :market_id %>
+        <%= f.collection_select(:market_id, Market.all, :id, :name) %>
+        <br>
+        <br>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+        <br>
+        <br>
+        <br>
+        <%= f.submit %>
+    <% end %>
+
+</div>
