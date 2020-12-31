@@ -1,10 +1,10 @@
 <h1>Edit Antique:</h1>
 <br>
-<% if !@antique.full_messages.empty? %>
+<% if !@antique.errors.empty? %>
     <div id="error_explanation">
         <h2>Errors:</h2>
         <ul>
-            <% @antique.full_messages.each do |message| %>
+            <% @antique.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
             <% end %>
         </ul>

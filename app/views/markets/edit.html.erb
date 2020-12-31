@@ -1,14 +1,14 @@
 <h1>Edit Market:</h1>
 <br>
-<% if @market.errors.any? %>
-    <div id="error_explanation">
-    <h2><%= pluralize(@market.errors.count, "error") %> prevented this market from being saved:</h2>
 
-    <ul>
-    <% @market.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-    <% end %>
-    </ul>
+<% if !@market.errors.empty? %>
+    <div id="error_explanation">
+        <h2>Errors:</h2>
+        <ul>
+            <% @market.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
     </div>
 <% end %>
 

@@ -61,8 +61,16 @@
       grid-column-end: 8;
       width: 100%;
     }
-
     input {
+      grid-column-start: 6;
+      grid-column-end: 8;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      color: #474747;
+    }
+
+    input[name="commit"] {
       grid-column-start: 6;
       grid-column-end: 8;
       width: 50%;

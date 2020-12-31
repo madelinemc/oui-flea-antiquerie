@@ -1,5 +1,15 @@
 <h1>Add a new Antique:</h1>
 <br>
+<% if !@antique.errors.empty? %>
+    <div id="error_explanation">
+        <h2>Errors:</h2>
+        <ul>
+            <% @antique.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
 
 <div class="form_layout">
 
