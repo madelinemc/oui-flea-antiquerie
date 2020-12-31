@@ -55,6 +55,16 @@
       display: inline-block;
       background-color: #A3AC99;
     }
+
+    .main_nav img {
+      background-color: transparent;
+    }
+
+    .main_footer {
+      margin-bottom: 0;
+      grid-column-end: span 12;
+      grid-row: last-line;
+    }
     
     html, body {
       height: 100%;
