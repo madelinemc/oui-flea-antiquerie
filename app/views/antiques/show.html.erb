@@ -1,8 +1,9 @@
 <div class="grid_container">
 
     <div class="item_1">
-        <p><%= @user.username %></p>
-        <div>@antique.photo placeholder</div>
+        <h3><%= "@#{@user.username}" %></h3>
+        <img><%= image_tag @antique.antique_photo %></img>
+        <h3><%= "placeholder hearts" %></h3>
     </div>
 
     <div class="item_2">
