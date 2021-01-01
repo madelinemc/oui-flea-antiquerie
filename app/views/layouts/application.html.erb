@@ -11,23 +11,29 @@
 
   <body>
     <header>
-      <nav class="main_nav">
-        <li><%= image_tag("logo-nav", height: '40') %></li>
+      <nav>
+        <img><%= image_tag("logo-nav", height: '40') %></img>
       </nav>
-      <nav class="main_nav">
-        <li>favorites</li>
-        <li>profile</li>
-        <li>dropdowntools</li>
+      <nav class="nav_icons">
+        <% if !is_logged_in? %>
+          <li><%= link_to "sign up", new_user_path %></li>
+          <li> | </li>
+          <li><%= link_to "log in", new_session_path %></li>
+        <% else %>
+          <li>favorites</li>
+          <li><%= link_to "profile", user_path(session[:user_id]) %></li>
+          <li>log out</li>
+        <% end %>
       </nav>
     </header>
 
       <%= yield %>
 
     <footer class="main_footer">
-      <ul>
+      <hr/>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Github", "https://github.com/madelinemc/oui-flea-antiquerie", target: "_blank" %></li>
-      </ul>
+        <br>
       <small>&copy; 2020 <strong>OUI, FLEA ANTIQUERIE</strong></small>
     </footer>
     
