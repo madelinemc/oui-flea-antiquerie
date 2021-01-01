@@ -14,8 +14,8 @@
 <div class="form_layout">
 
     <%= form_with(model: @antique, local: true) do |f| %>
-        <%= f.label :photo %>
-        <%= f.text_area :photo %>
+        <%= f.label :antique_photo, "Add a photo of your antique: " %>
+        <%= f.file_field :antique_photo %>
         <br>
         <br>
         <%= f.label :period %>

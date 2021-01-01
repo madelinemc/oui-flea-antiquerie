@@ -4,6 +4,8 @@ class User < ApplicationRecord
     has_many :favorites
     has_many :favorited_antiques, through: :favorties, foreign_key: 'antique_id'
 
+    has_one_attached :profile_picture
+
     validates :username, presence: true, uniqueness: true, length: { maximum: 30 }
     validates :first_name, :last_name, presence: true
     validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
