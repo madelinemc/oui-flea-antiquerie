@@ -3,21 +3,4 @@
 
 <%= render 'layouts/errors', {object: @market} %>
 
-<%= form_with(model: @market, local: true) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <br>
-    <%= f.label :market_type %>
-    <%= f.select :market_type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
-    <br>
-    <%= f.label :season %>
-    <%= f.select :season, ['Year-long', 'Spring', 'Summer', 'Fall', 'Winter']%>
-    <br>
-    <%= f.label :number_of_vendors %>
-    <%= f.number_field :number_of_vendors %>
-    <br>
-    <%= f.submit %>
-<% end %>
+<%= render 'form' %>
