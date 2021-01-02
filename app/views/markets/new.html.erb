@@ -1,15 +1,6 @@
 <h1>Add a new Market:</h1>
 <br>
-<% if !@market.errors.empty? %>
-    <div id="error_explanation">
-        <h2>Errors:</h2>
-        <ul>
-            <% @market.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-        </ul>
-    </div>
-<% end %>
+<%= render 'layouts/errors', {object: @market} %>
 
 <%= form_with(model: @market, local: true) do |f| %>
     <%= f.label :name %>

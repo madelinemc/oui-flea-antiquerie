@@ -3,9 +3,9 @@
 
     <% @antiques.each do |antique| %>
         <div class="antique_item">
-            <p><%= antique.user.first_name %></p>
+            <h5><%= link_to "@#{antique.user.username}", user_path(antique.user_id) %></h5>
             <img><%= image_tag antique.antique_photo %></img>
-            <p><%= "placeholder hearts" %></p>
+            <h5><%= "placeholder hearts" %></h5>
         </div>
     <% end %>
 

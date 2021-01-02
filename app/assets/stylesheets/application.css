@@ -146,9 +146,22 @@
       margin: 0;
     }
 
+    h5 {
+      font-family: 'Playfair Display', serif;
+      color: #A3AC99;
+      justify-content: left;
+      padding: 0;
+      margin: 0;
+    }
+
     p {
         font-family: 'Raleway', sans-serif;
-        color: #474747
+        color: #474747;
     }
+
+    a:link {
+      text-decoration: none;
+    }
+
 
 }

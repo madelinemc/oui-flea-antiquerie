@@ -7,6 +7,7 @@ class AntiquesController < ApplicationController
 
     def new
         @antique = Antique.new
+        @antique.build_market
     end
 
     def create
@@ -48,7 +49,7 @@ class AntiquesController < ApplicationController
     end
 
     def antique_params
-        params.require(:antique).permit(:description, :antique_photo, :period, :provenance, :category_id, :market_id)
+        params.require(:antique).permit(:description, :antique_photo, :period, :provenance, :category_id, :market_id, market_attributes: [:name])
     end
 
 end

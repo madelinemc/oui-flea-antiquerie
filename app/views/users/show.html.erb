@@ -1,10 +1,19 @@
-<h1><%= @user.username%> </h1>
+<h1><%= "@#{@user.username}" %></h1>
 <%= link_to "Add an Antique", new_antique_path(@antique) %>
 <%= link_to "View Latest Antiques", antiques_path(@antiques) %>
 <%= link_to "Add a new Market", new_market_path(@market) %>
 <%= link_to "Check out all Flea Markets", markets_path(@markets) %>
-<% @owned_antiques.each do |owned_antique| %>
-    <div class="antique_item">
-        <p><%= owned_antique.id %></p>
-    </div>
-<% end %>
+
+<div class="grid_container">
+
+    <% @owned_antiques.each do |owned_antique| %>
+        <div class="antique_item">
+            <img><%= image_tag owned_antique.antique_photo %></img>
+            <h5><%= link_to "view antique", antique_path(owned_antique) %></h5>
+        </div>
+    <% end %>
+
+</div>
+
+
+

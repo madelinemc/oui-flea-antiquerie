@@ -1,15 +1,6 @@
 <h1>Edit Antique:</h1>
 <br>
-<% if !@antique.errors.empty? %>
-    <div id="error_explanation">
-        <h2>Errors:</h2>
-        <ul>
-            <% @antique.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-        </ul>
-    </div>
-<% end %>
+<%= render 'layouts/errors', {object: @antique} %>
 
 <%= form_with(model: @antique, local: true) do |f| %>
     <%= f.label :antique_photo, "Add a photo of your antique: " %>
