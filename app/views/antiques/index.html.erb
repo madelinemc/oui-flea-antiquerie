@@ -1,4 +1,13 @@
-<h1>all antiques</h1>
+<% if @market %>
+    <%= render 'layouts/market_details' %>
+<% else %>
+    <h1>all antiques</h1>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+
 <div class="grid_container">
 
     <% @antiques.each do |antique| %>

@@ -2,7 +2,14 @@ class AntiquesController < ApplicationController
     before_action :set_antique, only: [:show, :edit, :update, :destory]
 
     def index
-        @antiques = Antique.all
+        if params[:market_id]
+            @market = Market.find_by(id: params[:market_id])
+            if @market
+                @antiques = @market.antiques
+            end
+        else
+            @antiques = Antique.all
+        end
     end
 
     def new

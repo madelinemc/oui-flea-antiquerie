@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # delete '/antiques/:id/delete', to: 'antiques#destroy'
   resources :antiques
   resources :markets do
-    resources :antiques, only: [:index, :new, :create, :show]
+    resources :antiques, only: [:index, :new, :create]
   end
   
  
