@@ -4,7 +4,7 @@
 
 <div class="form_layout">
 
-    <%= form_with model: [@antique.market.id, @antique], local: true do |f| %>
+    <%= form_with model: @antique.market.id ? [@antique.market, @antique] : @antique, local: true do |f| %>
         <%= f.label :antique_photo, "Add a photo of your antique: " %>
         <%= f.file_field :antique_photo %>
         <br>

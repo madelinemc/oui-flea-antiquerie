@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   # get '/antiques/:id/edit', to: 'antiques#edit'
   # patch '/antiques/:id', to: 'antiques#update'
   # delete '/antiques/:id/delete', to: 'antiques#destroy'
-
+  resources :antiques
   resources :markets do
-    resources :antiques, only: [:index, :new]
+    resources :antiques, only: [:index, :new, :create, :show]
   end
   
-  resources :antiques
+ 
   resources :users, except: [:destory]
 
   resources :sessions, only: [:new, :create, :destory]

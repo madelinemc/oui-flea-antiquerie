@@ -24,7 +24,7 @@ class AntiquesController < ApplicationController
         if @antique.valid? 
             @antique.save
             if params[:market_id]
-                redirect_to market_antique_path(params[:market_id], @antique)
+                redirect_to market_antique_path(params[:market_id], @antique.id)
             else
                 redirect_to antique_path(@antique)
             end
