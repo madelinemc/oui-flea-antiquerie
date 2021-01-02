@@ -5,4 +5,6 @@ class Market < ApplicationRecord
 
     validates :name, presence: true, uniqueness: true
 
+    has_one_attached :market_photo
+
 end

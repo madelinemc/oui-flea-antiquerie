@@ -14,5 +14,8 @@
     <%= f.label :number_of_vendors %>
     <%= f.number_field :number_of_vendors %>
     <br>
+    <%= f.label :market_photo, "Add a photo of the market" %>
+    <%= f.file_field :market_photo %>
+    <br>
     <%= f.submit %>
 <% end %>

@@ -2,7 +2,7 @@
 
     <div class="item_1">
     <h1><%= @market.name %></h1>
-    <div>@market.photo placeholder</div>
+    <img><%= image_tag @market.market_photo %></img>
     </div>
 
     <div class="item_2">
@@ -20,5 +20,5 @@
     <div class="item_5">
     <p><strong>Number of Vendors: </strong><%= @market.number_of_vendors %></p></br>
     </div>
-    
+
 </div>
