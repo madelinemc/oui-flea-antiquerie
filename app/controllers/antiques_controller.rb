@@ -7,7 +7,15 @@ class AntiquesController < ApplicationController
 
     def new
         @antique = Antique.new
-        @antique.build_market
+        if params[:market_id]
+            market = Market.find_by(id: params[:market_id])
+            if market
+                @antique.market = market
+            end
+        else
+            @markets = Market.all
+            @antique.build_market
+        end
     end
 
     def create
@@ -15,7 +23,11 @@ class AntiquesController < ApplicationController
         @antique.user_id = session[:user_id]
         if @antique.valid? 
             @antique.save
-            redirect_to antique_path(@antique)
+            if params[:market_id]
+                redirect_to market_antique_path(params[:market_id], @antique)
+            else
+                redirect_to antique_path(@antique)
+            end
         else
             render :new
         end

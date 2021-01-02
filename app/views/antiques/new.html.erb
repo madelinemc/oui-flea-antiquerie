@@ -4,7 +4,7 @@
 
 <div class="form_layout">
 
-    <%= form_with(model: @antique, local: true) do |f| %>
+    <%= form_with model: [@antique.market.id, @antique], local: true do |f| %>
         <%= f.label :antique_photo, "Add a photo of your antique: " %>
         <%= f.file_field :antique_photo %>
         <br>
@@ -21,13 +21,17 @@
         <%= f.collection_select(:category_id, Category.all, :id, :title) %>
         <br>
         <br>
-        <%= f.label :market_id, "Select the market where it was purchased" %>
-        <%= f.collection_select(:market_id, Market.all, :id, :name) %>
-        <br>
-        <br>
-        <%= f.fields_for :market do |cf| %>
-            <%= cf.label :name, "Or create a new market by name" %>
-            <%= cf.text_field :name %>
+        <% if @antique.market.id %>
+            <%= f.hidden_field :market_id %>
+        <% else %>
+            <%= f.label :market_id, "Select the market where it was purchased" %>
+            <%= f.collection_select(:market_id, Market.all, :id, :name) %>
+            <br>
+            <br>
+            <%= f.fields_for :market do |cf| %>
+                <%= cf.label :name, "Or create a new market by name" %>
+                <%= cf.text_field :name %>
+            <% end %>
         <% end %>
         <br>
         <br>
