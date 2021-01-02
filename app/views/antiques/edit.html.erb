@@ -23,3 +23,8 @@
     <br>
     <%= f.submit %>
 <% end %>
+<br>
+<br>
+<%= form_with model: @antique, method: :delete do |f| %>
+    <%= f.submit "delete antique" %>
+<% end %>
