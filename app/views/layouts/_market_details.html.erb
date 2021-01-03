@@ -2,7 +2,7 @@
 
     <div class="item_1">
     <h1><%= @market.name %></h1>
-    <img><%= image_tag @market.market_photo %></img>
+    <%= select_market_image(@market) %>
     </div>
 
     <div class="item_2">
