@@ -1,9 +1,9 @@
 <% if !object.errors.empty? %>
-    <div class="error_explanation">
-        <h3>Errors:</h2>
+    <div class="error_box">
+        <h2>Errors:</h2>
         <ul>
             <% object.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
+                <li class="error_explaination">- <%= message %></li>
             <% end %>
         </ul>
     </div>
