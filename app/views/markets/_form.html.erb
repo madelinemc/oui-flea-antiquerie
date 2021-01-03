@@ -6,10 +6,10 @@
     <%= f.text_field :location %>
     <br>
     <%= f.label :market_type %>
-    <%= f.select :market_type, ['outdoor', 'indoor', 'pop-up', 'permanent']%>
+    <%= f.select :market_type, ['outdoor', 'indoor', 'pop-up', 'permanent'], { include_blank: true } %>
     <br>
     <%= f.label :season %>
-    <%= f.select :season, ['Year-long', 'Spring', 'Summer', 'Fall', 'Winter']%>
+    <%= f.select :season, ['Year-long', 'Spring', 'Summer', 'Fall', 'Winter'], { include_blank: true } %>
     <br>
     <%= f.label :number_of_vendors %>
     <%= f.number_field :number_of_vendors %>
