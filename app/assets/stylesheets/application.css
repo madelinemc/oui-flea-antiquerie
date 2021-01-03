@@ -111,7 +111,7 @@
     nav li {
       display: inline-block;
       background-color: #A3AC99;
-    }
+    } 
 
     nav img {
       background-color: transparent;
@@ -130,6 +130,12 @@
     .nav_icons li a:link, .nav_icons li a:visited {
       font-family: 'Playfair Display', serif;
       color: white;
+    }
+
+    .nav_icons li .button_to {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      display: block;
     }
 
     hr {
@@ -237,5 +243,44 @@
       list-style: none;
     }
     
+    .bb1 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 4;
+      grid-row-end: 6;
+      align-self: center;
+      justify-self: start;
+      text-align: left;
+    }
+
+    .bb2 {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 4;
+      grid-row-end: 6;
+      align-self: center;
+      justify-self: start;
+      text-align: left;
+    }
+
+    .bb3 {
+      grid-column-start: 7;
+      grid-column-end: 9;
+      grid-row-start: 4;
+      grid-row-end: 6;
+      align-self: center;
+      justify-self: start;
+      text-align: left;
+    }
+
+    .bb4 {
+      grid-column-start: 9;
+      grid-column-end: 11;
+      grid-row-start: 4;
+      grid-row-end: 6;
+      align-self: center;
+      justify-self: start;
+      text-align: left;
+    }
 
 }
