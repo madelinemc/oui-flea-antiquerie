@@ -1,6 +1,8 @@
 <h1><%= "@#{@user.username}" %></h1>
 
-<%= render 'layouts/buttonbar' %>
+<% if logged_in_user(@user) %>
+    <%= render 'layouts/buttonbar' %>
+<% end %>
 
 <div class="grid_container">
 

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :require_login, only: [:index, :show, :edit]
+    before_action :require_login, only: [:index, :edit]
 
     def index #users "home" page
         current_user
@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show #users "profile" page
-        current_user
+        @user = User.find_by(id: params[:id])
         @owned_antiques = @user.owned_antiques
     end
     
@@ -38,6 +38,11 @@ class UsersController < ApplicationController
         else
             render :edit
         end
+    end
+
+    def destroy
+        current_user.destroy
+        redirect_to home_path
     end
 
     private

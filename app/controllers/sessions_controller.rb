@@ -21,12 +21,21 @@ class SessionsController < ApplicationController
         end
     end
 
-    def destory
-        session.clear
+    def destroy
+        session[:user_id] = nil
         redirect_to home_path
     end
 
-    def omniauth_login
+    def omniauth
+        @user = User.create_from_omniauth(auth)
+        if @user.valid?
+            session[:user_id] = @user.id
+            @user.save
+            redirect_to user_path(@user)
+        else
+            #flash[:message] = user.errors.full_messages.join(", ")
+            redirect_to home_path
+        end
     end
 
     private
@@ -35,6 +44,10 @@ class SessionsController < ApplicationController
         if is_logged_in?
             redirect_to user_path(User.find_by_id(session[:user_id]))
         end
+    end
+
+    def auth
+        request.env['omniauth.auth']
     end
 
 end

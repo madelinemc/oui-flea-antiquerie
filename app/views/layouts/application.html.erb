@@ -18,14 +18,17 @@
         <% if !is_logged_in? %>
           <li><%= link_to "sign up", new_user_path %></li>
           <li> | </li>
-          <li><%= link_to "log in", new_session_path %></li>
+          <li><%= link_to "log in", new_sessions_path %></li>
+          <li> | </li>
+          <li><%= button_to "google log in", '/auth/google_oauth2' %></li>
         <% else %>
           <li>favorites</li>
-          <li><%= link_to "profile", user_path(session[:user_id]) %></li>
-          <li><%= "log out" %></li>
+          <li><%= link_to "profile", user_path(current_user) %></li>
+          <li><%= link_to "log out", sessions_path, :method => :delete %></li>
         <% end %>
       </nav>
     </header>
+    <%= button_to "google log in", '/auth/google_oauth2' %>
 
       <%= yield %>
 
