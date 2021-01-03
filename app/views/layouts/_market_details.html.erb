@@ -1,29 +1,28 @@
 <div class="grid_container">
 
     <div class="item_1">
-    <h1><%= @market.name %></h1>
-    <%= select_market_image(@market) %>
+        <h1><%= @market.name %></h1>
+        <%= select_market_image(@market) %>
     </div>
 
     <div class="item_2">
-    <p><strong>Location: </strong><%= @market.location %></p></br>
+        <p><strong>Location: </strong><%= @market.location %></p></br>
     </div>
 
     <div class="item_3">
-    <p><strong>Type of Market: </strong><%= @market.market_type %></p></br>
+        <p><strong>Type of Market: </strong><%= @market.market_type %></p></br>
     </div>
 
     <div class="item_4">
-    <p><strong>Season: </strong><%= @market.season %></p></br>
+        <p><strong>Season: </strong><%= @market.season %></p></br>
     </div>
 
     <div class="item_5">
-    <p><strong>Number of Vendors: </strong><%= @market.number_of_vendors %></p></br>
+        <p><strong>Number of Vendors: </strong><%= @market.number_of_vendors %></p></br>
     </div>
 
     <div class="item_6">
-    <a class="button"><%=  link_to "Add an Antique", new_market_antique_path(@market) %></a></br>
+        <a><%=  link_to "+ Add an Antique", new_market_antique_path(@market) %></a></br>
     </div>
-    <li><%= link_to "About", about_path %></li>
 
 </div>

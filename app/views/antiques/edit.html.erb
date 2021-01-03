@@ -21,10 +21,10 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
     <br>
-    <%= f.submit %>
+    <br>
+    <%= f.submit "edit antique", :class => "button_submit sage" %>
 <% end %>
 <br>
-<br>
 <%= form_with model: @antique, method: :delete do |f| %>
-    <%= f.submit "delete antique" %>
+    <%= f.submit "delete antique", :class => "button_submit sage" %>
 <% end %>
