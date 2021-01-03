@@ -2,19 +2,23 @@
 <div class="grid_container">
 
     <div class="bb1">
-        <%= link_to "Add an Antique", new_antique_path(@antique) %>
+        <img><%= image_tag("add-antique-icon") %></img>
+        <%= link_to "add an antique", new_antique_path(@antique) %>
     </div>
 
     <div class="bb2">
-        <%= link_to "View Latest Antiques", antiques_path(@antiques) %>
+        <img><%= image_tag("view-antiques-icon") %></img>
+        <%= link_to "view latest antiques", antiques_path(@antiques) %>
     </div>
 
     <div class="bb3">
-        <%= link_to "Add a new Market", new_market_path(@market) %>
+        <img><%= image_tag("add-market-icon") %></img>
+        <%= link_to "add a new market", new_market_path(@market) %>
     </div>
 
     <div class="bb4">
-        <%= link_to "Check out all Flea Markets", markets_path(@markets) %>
+        <img><%= image_tag("view-markets-icon") %></img>
+        <%= link_to "browse all markets", markets_path(@markets) %>
     </div>
 
 </div>
