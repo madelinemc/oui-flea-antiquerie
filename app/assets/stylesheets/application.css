@@ -102,8 +102,6 @@
     }
     
     nav {
-      font-family: 'Playfair Display', serif;
-      color: white;
       width: 100%;
       background-color: #A3AC99;
       list-style: none;
@@ -126,6 +124,11 @@
 
     .nav_icons li {
       margin: 10px;
+    }
+
+    .nav_icons li a:link, .nav_icons li a:visited {
+      font-family: 'Playfair Display', serif;
+      color: white;
     }
 
     hr {
