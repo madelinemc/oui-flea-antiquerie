@@ -1,5 +1,6 @@
 class AntiquesController < ApplicationController
-    before_action :set_antique, only: [:show, :edit, :update, :destory]
+    before_action :set_antique, only: [:show, :edit, :update, :destroy]
+    before_action :require_login, only: [:new, :create, :edit, :update]
 
     def index
         if params[:market_id]

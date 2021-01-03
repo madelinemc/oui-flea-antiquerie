@@ -1,5 +1,6 @@
 class MarketsController < ApplicationController
     before_action :set_market, only: [:show, :edit, :update]
+    before_action :require_login, only: [:new, :create, :edit, :update]
       
     def index
         @markets = Market.all
