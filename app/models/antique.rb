@@ -5,7 +5,7 @@ class Antique < ApplicationRecord
 
     has_one_attached :antique_photo
 
-    validates :description, length: { maximum: 2200 }
+    validates :description, length: { maximum: 200 }
 
     def market_attributes=(attributes)
         if !attributes["name"].blank?

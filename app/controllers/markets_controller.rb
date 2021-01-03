@@ -10,10 +10,10 @@ class MarketsController < ApplicationController
     end
 
     def create
-        market = Market.create(market_params)
-        if market.valid?
-            market.save
-            redirect_to market_path(market)
+        @market = Market.create(market_params)
+        if @market.valid?
+            @market.save
+            redirect_to market_path(@market)
         else
             render :new
         end
