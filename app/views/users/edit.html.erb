@@ -2,3 +2,7 @@
 <h1>edit your profile</h1>
 <br>
 <%= render 'form' %>
+<br>
+<%= form_with model: @user, method: :delete do |f| %>
+    <%= f.submit "Delete Account", :class => "button_submit sage" %>
+<% end %>
