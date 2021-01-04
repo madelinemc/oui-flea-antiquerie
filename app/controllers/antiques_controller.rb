@@ -9,7 +9,7 @@ class AntiquesController < ApplicationController
                 @antiques = @market.antiques
             end
         else
-            @antiques = Antique.all
+            @antiques = Antique.latest_antiques(12)
         end
     end
 
