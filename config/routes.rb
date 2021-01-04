@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   resources :users, except: [:index]
 
-  resource :sessions #, only: [:new, :create, :destroy]
+  resource :sessions, only: [:new, :create, :destroy]
   get '/', to: 'sessions#home', as: "home"
   get '/about', to: 'sessions#about', as: "about"
   get '/auth/:provider/callback', to: 'sessions#omniauth'

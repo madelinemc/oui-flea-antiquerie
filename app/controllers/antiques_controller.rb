@@ -1,6 +1,6 @@
 class AntiquesController < ApplicationController
     before_action :set_antique, only: [:show, :edit, :update, :destroy]
-    before_action :require_login, only: [:new, :create, :edit, :update]
+    before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 
     def index
         if params[:market_id]
@@ -42,9 +42,9 @@ class AntiquesController < ApplicationController
     end
 
     def show
-        @user = User.find_by_id(@antique.user_id) #or = @antique.user
-        @category = Category.find_by_id(@antique.category_id) #or = @antique.category
-        @market = Market.find_by_id(@antique.market_id) #or = @antique.market
+        @user = @antique.user
+        @category = @antique.category
+        @market = @antique.market
     end
 
     def edit

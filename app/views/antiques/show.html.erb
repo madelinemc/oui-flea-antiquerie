@@ -22,7 +22,14 @@
     </div>
 
     <div class="item_6">
-        <p><%= @antique.description %></p></br>
+        <p><strong>Description: </strong><%= @antique.description %></p></br>
     </div>
-    
+
+    <div class="item_7">
+        <a><%=  link_to "Edit Antique", edit_antique_path(@antique) %></a>
+    </div>
+
 </div>
+
+<div
+

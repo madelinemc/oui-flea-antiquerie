@@ -1,6 +1,6 @@
 class MarketsController < ApplicationController
-    before_action :set_market, only: [:show, :edit, :update]
-    before_action :require_login, only: [:new, :create, :edit, :update]
+    before_action :set_market, only: [:show, :edit, :update, :delete]
+    before_action :require_login, only: [:new, :create, :edit, :update, :delete]
       
     def index
         @markets = Market.all
@@ -30,6 +30,11 @@ class MarketsController < ApplicationController
         market = Market.find_by(id: params[:id])
         market.update(market_params)
         redirect_to market_path(market)
+    end
+
+    def delete
+        @market.destroy
+        redirect_to markets_path
     end
 
     private
