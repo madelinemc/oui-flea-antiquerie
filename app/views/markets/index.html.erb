@@ -1,8 +1,12 @@
 <h1>all markets</h1>
-<% @markets.each do |market| %>
-    <div class="market_item">
-        <p><%= link_to "#{market.name}", market_antiques_path(market) %></p>
-        <p><%= market.location %></p>
-        <br>
-    </div>
-<% end %>
+<div class="grid_container">
+
+    <% @markets.each do |market| %>
+        <div class="market_item">
+            <p><%= link_to "#{market.name}", market_antiques_path(market) %></p>
+            <%= select_market_image(market, false) %>
+            <p><%= market.location %></p>
+        </div>
+    <% end %>
+
+</div>

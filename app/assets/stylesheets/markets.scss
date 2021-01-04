@@ -62,6 +62,19 @@
       justify-self: start;
       text-align: left;
     }
+
+    .market_item {
+      grid-column: span 2;
+      grid-row: span 3;
+    }
+  
+    .market_item img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
+      margin: 0;
+      padding: 0
+    }
   
   }
   
