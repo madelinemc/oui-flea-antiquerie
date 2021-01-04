@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :antiques, only: [:index, :new, :create]
   end
   
-  resources :users
+  resources :users, except: [:index]
 
   resource :sessions #, only: [:new, :create, :destroy]
   get '/', to: 'sessions#home', as: "home"

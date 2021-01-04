@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
-    before_action :require_login, only: [:index, :edit]
-
-    def index #users "home" page
-        current_user
-        @antiques = Antique.all  #this is same as antiques index page so make partial in view
-    end
+    before_action :require_login, only: [:edit]
 
     def show #users "profile" page
         @user = User.find_by(id: params[:id])
