@@ -12,7 +12,9 @@
   <body>
     <header>
       <nav>
-        <img><%= image_tag("logo-nav", height: '40') %></img>
+        <%= link_to home_path do %>
+          <img><%= image_tag("logo-nav", height: '40') %></img>
+        <% end %>
       </nav>
       <nav class="nav_icons">
         <% if !is_logged_in? %>
