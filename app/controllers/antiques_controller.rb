@@ -9,7 +9,7 @@ class AntiquesController < ApplicationController
                 @antiques = @market.antiques
             end
         else
-            @antiques = Antique.latest_antiques(12)
+            @antiques = Antique.latest_antiques(18)
         end
     end
 
@@ -32,7 +32,7 @@ class AntiquesController < ApplicationController
         if @antique.valid? 
             @antique.save
             if params[:market_id]
-                redirect_to market_antique_path(params[:market_id], @antique.id)
+                redirect_to market_antique_path(params[:market_id])
             else
                 redirect_to antique_path(@antique)
             end
@@ -51,14 +51,14 @@ class AntiquesController < ApplicationController
     end
     
     def update
-        antique = Antique.find_by(id: params[:id])
-        antique.update(antique_params)
-        redirect_to antique_path(antique)
+        #antique = Antique.find_by(id: params[:id])
+        @antique.update(antique_params)
+        redirect_to antique_path(@antique)
     end
 
     def destroy
-        antique = Antique.find_by(id: params[:id])
-        antique.destory
+        #antique = Antique.find_by(id: params[:id])
+        @antique.destroy
         redirect_to antiques_path
     end
 
