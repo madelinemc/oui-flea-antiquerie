@@ -37,6 +37,15 @@ class AntiquesController < ApplicationController
                 redirect_to antique_path(@antique)
             end
         else
+            if params[:market_id]
+                market = Market.find_by(id: params[:market_id])
+                if market
+                    @antique.market = market
+                end
+            else
+                @markets = Market.all
+                @antique.build_market
+            end
             render :new
         end
     end
