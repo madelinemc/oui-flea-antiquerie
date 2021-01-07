@@ -148,7 +148,7 @@
     }
 
     .main_footer {
-      padding-top: 500px;
+      padding-top: 200px;
       text-align: center;
       list-style: none;
     }
@@ -179,6 +179,16 @@
       justify-content: left;
       padding: 0;
       margin: 0;
+    }
+
+    h4 {   
+      font-family: 'Playfair Display', serif;
+      color: #A3AC99;
+      text-align: center;
+      font-size: large;
+      justify-content: center;
+      padding: 0;
+      margin: auto;
     }
 
     h5 {

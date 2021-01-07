@@ -1,3 +1,31 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.home_item_1 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url("main-image.png");
+    overflow: hidden;
+  }
+
+  .home_item_2 {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    width: 100%;
+  }
+
+  .home_item_3 {
+    grid-column-start: span 12;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    max-width: 100%;
+    background-color: #E8E1D7;
+    text-align: center;
+  }
