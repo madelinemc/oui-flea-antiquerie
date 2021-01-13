@@ -1,24 +1,25 @@
-# README
+# O U I ,  F L E A 
+## About:
+Oui, Flea was created by an antique lover for antique lovers to showcase their collections and highlight the flea markets where they purchased them. Users get inspired by browsing through images of all the latest antiques and can get a taste of what a particular market has to offer based on other users uploads. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Future updates include the ability to like antiques thereby saving them for the user to view. 
 
-Things you may want to cover:
+## Software Used:
+* Rails
+* Active Record
+* Postgres database
+* Active Storage for image handling
+* Bcrypt for password storage and securty
+* Google Oauth
 
-* Ruby version
+## Installation:
+1. Fork and clone the repository and change into the directory.
+2. In your terminal run 
+    ```$ bundle install```
+3. To create the database and populate the app with antique categories, run: 
+    ```$ rails db:migrate```
+    ```$ rails db:seed```
+4. To interact with the app, run ```$ rails s``` in your terminal and navigate to the local server in your browser.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License:
+This project is licensed under the MIT License.
