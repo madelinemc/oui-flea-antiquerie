@@ -7,7 +7,7 @@ class Antique < ApplicationRecord
 
     validates :description, length: { maximum: 200 }
 
-    scope :latest_antiques, -> (limit) { order("created_at desc").limit(limit) }
+    scope :latest_antiques, -> (number) { order("created_at desc").limit(number) }
 
     def market_attributes=(attributes)
         if !attributes["name"].blank?
