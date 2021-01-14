@@ -8,10 +8,15 @@ class AntiquesController < ApplicationController
             if @market
                 @antiques = @market.antiques
             end
+        elsif params[:category_id]
+            @category = Category.find_by_id(params[:category_id]) 
+            @antiques = @category.antiques
         else
             @antiques = Antique.latest_antiques(18)
         end
     end
+
+
 
     def new
         @antique = Antique.new

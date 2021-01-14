@@ -7,6 +7,12 @@
 <br>
 <br>
 <br>
+<%= form_with scope: "", method: "get", local: true do |f| %>
+<%= f.label :category_id %>
+<%= f.collection_select(:category_id, Category.all, :id, :title, { include_blank: true } ) %>
+<%= f.submit "filter by category", :class => "button_submit sage"  %>
+<% end %>
+<br>
 
 <div class="grid_container">
 
